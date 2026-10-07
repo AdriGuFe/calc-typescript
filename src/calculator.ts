@@ -10,8 +10,9 @@ export class Calculator {
 
         const element = document.querySelector<HTMLElement>(selector);
         if (!element) {
-            throw new Error(`No se encontró el contenedor con el ID: ${selector}`);
+            throw new Error(`Element not found for selector: ${selector}`);
         }
+
         this.container = element;
         this.init();
     }
