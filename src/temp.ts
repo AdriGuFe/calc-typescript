@@ -54,6 +54,7 @@ export class Temp {
 
   private stop(): void {
     this.subscription?.unsubscribe();
+    this.subscription = undefined;
   }
 
   private start(): void {
@@ -67,6 +68,7 @@ export class Temp {
   private reset(): void {
     this.stop();
     this.updateDisplay(0);
+    this.subscription = undefined;
   }
 
   private updateDisplay(totalSeconds: number): void {
